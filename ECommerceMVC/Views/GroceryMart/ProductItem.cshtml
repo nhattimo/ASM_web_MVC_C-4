@@ -1,0 +1,305 @@
+﻿@model IEnumerable<ECommerceMVC.ViewModels.HangHoaVM>
+
+<!-- Slideshow -->
+<div class="home__container">
+    <div class="slideshow">
+        <div class="slideshow__inner">
+            <!-- Slideshow item 1 -->
+            <div class="slideshow__item mySlides">
+                <a href="#!" class="slideshow__link">
+                    <picture>
+                        <source media="(max-width: 767.98px)"
+                                srcset="
+                                            ~/assets/img/slideshows/item1-md.png
+                                        " />
+                        <img src="~/assets/img/slideshows/item1.png"
+                             alt=""
+                             class="slideshow__img" />
+                    </picture>
+                </a>
+            </div>
+            <!-- Slideshow item 2 -->
+            <div class="slideshow__item mySlides">
+                <a href="#!" class="slideshow__link">
+                    <img src="~/assets/img/slideshows/item2.jpg"
+                         alt=""
+                         class="slideshow__img" />
+                </a>
+            </div>
+            <!-- Slideshow item 3 -->
+            <div class="slideshow__item mySlides">
+                <a href="#!" class="slideshow__link">
+                    <img src="~/assets/img/slideshows/item3.jpg"
+                         alt=""
+                         class="slideshow__img" />
+                </a>
+            </div>
+        </div>
+
+        <div class="slideshow__page">
+            <span class="slideshow__num">1</span>
+            <span class="slideshow__slider"></span>
+            <span class="slideshow__num">5</span>
+        </div>
+    </div>
+</div>
+
+<!-- Browse Categories -->
+<section class="home__container">
+    <div class="home__row">
+        <h2 class="home__heading">Browse Categories</h2>
+    </div>
+    <div class="home__cate row row-cols-3 row-cols-md-1">
+        <!-- Category item 1 -->
+        <div class="col">
+            <a href="#!">
+                <article class="cate-item">
+                    <img src="~/assets/img/category-item/item1.png"
+                         alt=""
+                         class="cate-item__thumb" />
+                    <div class="cate-item__info">
+                        <h3 class="cate-item__title">$24 - $150</h3>
+                        <p class="cate-item__desc">
+                            New sumatra mandeling coffe blend
+                        </p>
+                    </div>
+                </article>
+            </a>
+        </div>
+        <!-- Category item 2 -->
+        <div class="col">
+            <a href="#!">
+                <article class="cate-item">
+                    <img src="~/assets/img/category-item/item2.png"
+                         alt=""
+                         class="cate-item__thumb" />
+                    <div class="cate-item__info">
+                        <h3 class="cate-item__title">$37 - $160</h3>
+                        <p class="cate-item__desc">
+                            Espresso arabica and robusta beans
+                        </p>
+                    </div>
+                </article>
+            </a>
+        </div>
+        <!-- Category item 3 -->
+        <div class="col">
+            <a href="#!">
+                <article class="cate-item">
+                    <img src="~/assets/img/category-item/item3.png"
+                         alt=""
+                         class="cate-item__thumb" />
+                    <div class="cate-item__info">
+                        <h3 class="cate-item__title">$32 - $160</h3>
+                        <p class="cate-item__desc">
+                            Lavazza top class whole bean coffee
+                            blend
+                        </p>
+                    </div>
+                </article>
+            </a>
+        </div>
+    </div>
+</section>
+
+<main class="container home">
+    <!-- Browse Products -->
+    <section class="home__container">
+        <h3> Có <b>@Model.Count()</b> sản phẩm.</h3>
+        <div class="home__row">
+            <h2 class="home__heading">Total LavAzza 1320</h2>
+            <div class="filter-wrap">
+                <button class="filter-btn js-toggle"
+                        toggle-target="#home-filter">
+                    Filter
+                    <img src="~/assets/icons/filter.svg"
+                         alt=""
+                         class="filter-btn__icon icon" />
+                </button>
+                <div id="home-filter" class="filter hide">
+                    <img src="~/assets/icons/arrow-up.png"
+                         alt=""
+                         class="filter__arrow" />
+                    <h3 class="filter__heading">Filter</h3>
+                    <form action="" class="filter__form form">
+                        <div class="filter__row filter__content">
+                            <!-- Filter column 1 -->
+                            <div class="filter__col">
+                                <label for="" class="form__label">Price</label>
+                                <div class="filter__form-group">
+                                    <div class="filter__form-slider"
+                                         style="
+                                                    --min-value: 10%;
+                                                    --max-value: 60%;
+                                                "></div>
+                                </div>
+                                <div class="filter__form-group filter__form-group--inline">
+                                    <div>
+                                        <label for=""
+                                               class="filter__form-lable filter__form-lable--small">
+                                            Minimum
+                                        </label>
+                                        <div class="filter__form-text-input filter__form-text-input--small">
+                                            <input type="text"
+                                                   class="filter__form-input"
+                                                   value="$30.00" />
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for=""
+                                               class="filter__form-lable filter__form-lable--small">
+                                            Maximum
+                                        </label>
+                                        <div class="filter__form-text-input filter__form-text-input--small">
+                                            <input type="text"
+                                                   class="filter__form-input"
+                                                   value="$100.00" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter__separate"></div>
+
+                            <!-- Filter column 2 -->
+                            <div class="filter__col">
+                                <label for="" class="form__label">Size/Weight</label>
+                                <div class="filter__form-group">
+                                    <div class="form__select-wrap">
+                                        <div class="form__select"
+                                             style="--width: 158px">
+                                            500g
+                                            <img src="~/assets/icons/select-arrow.svg"
+                                                 alt=""
+                                                 class="form__select-arrow icon" />
+                                        </div>
+                                        <div class="form__select-separate"></div>
+                                        <div class="form__select">
+                                            Gram
+                                            <img src="~/assets/icons/select-arrow.svg"
+                                                 alt=""
+                                                 class="form__select-arrow icon" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="filter__form-group">
+                                    <div class="form__tags">
+                                        <button class="form__tag">
+                                            Small
+                                        </button>
+                                        <button class="form__tag">
+                                            Medium
+                                        </button>
+                                        <button class="form__tag">
+                                            Large
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="filter__separate"></div>
+
+                            <!-- Filter column 3 -->
+                            <div class="filter__col">
+                                <label for="" class="form__label">Brand</label>
+                                <div class="filter__form-group">
+                                    <div class="filter__form-text-input">
+                                        <input type="text"
+                                               class="filter__form-input"
+                                               placeholder="Search brand name" />
+                                        <img src="~/assets/icons/search.svg"
+                                             alt=""
+                                             class="filter__form-input-icon icon" />
+                                    </div>
+                                </div>
+                                <div class="filter__form-group">
+                                    <div class="form__tags">
+                                        <button class="form__tag">
+                                            Lavazza
+                                        </button>
+                                        <button class="form__tag">
+                                            Nescafe
+                                        </button>
+                                        <button class="form__tag">
+                                            Starbucks
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="filter__row filter__footer">
+                            <button class="btn btn--text filter__cancel js-toggle"
+                                    toggle-target="#home-filter">
+                                Cancel
+                            </button>
+                            <button class="btn btn--primary filter__submit js-toggle"
+                                    toggle-target="#home-filter">
+                                Show Result
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="row row-cols-3 row-cols-lg-2 row-cols-sm-1 g-3">
+            @foreach (var item in Model)
+            {
+                <!-- Product card 1 -->
+                <div class="col">
+                    <article class="product-card">
+                        <div class="product-card__img-wrap">
+                            <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh">
+                                <img src="~/Hinh/HangHoa/@item.Hinh" class="product-card__thumb" alt="@item.TenHH">
+                            </a>
+                            <button class="like-btn product-card__like-btn">
+                                <img src="~/assets/icons/heart.svg"
+                                     alt=""
+                                     class="like-btn__icon icon" />
+                                <img src="~/assets/icons/heart-red.svg"
+                                     alt=""
+                                     class="like-btn__icon--liked" />
+                            </button>
+                        </div>
+                        <h3 class="product-card__title">
+                            <a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh"><h4>@item.TenHH</h4></a>
+                        </h3>
+                        <p class="product-card__brand">@item.MoTaNgan</p>
+                        <div class="product-card__row">
+                            <span class="product-card__price">$@item.DonGia</span>
+                            <img src="~/assets/icons/star.svg"
+                                 alt=""
+                                 class="product-card__star" />
+                            <span class="product-card__score">4.3</span>
+                        </div>
+                    </article>
+                </div>
+            }
+        </div>
+    </section>
+</main>
+
+
+
+
+@* @foreach (var item in Model)
+{
+	<div class="col-md-6 col-lg-6 col-xl-4">
+		<div class="rounded position-relative fruite-item">
+			<div class="fruite-img">
+				<a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh">
+					<img src="~/Hinh/HangHoa/@item.Hinh" class="img-fluid w-100 rounded-top" alt="@item.TenHH">
+				</a>
+			</div>
+			<div class="text-white bg-secondary px-3 py-1 rounded position-absolute" style="top: 10px; left: 10px;">@item.TenLoai</div>
+			<div class="p-4 border border-secondary border-top-0 rounded-bottom">
+				<a asp-action="Detail" asp-controller="HangHoa" asp-route-id="@item.MaHh"><h4>@item.TenHH</h4></a>
+				<p>@item.MoTaNgan</p>
+				<div class="d-flex justify-content-between flex-lg-wrap">
+					<p class="text-dark fs-5 fw-bold mb-0">$@item.DonGia</p>
+					<a asp-action="AddToCart" asp-controller="Cart" asp-route-id="@item.MaHh" class="btn border border-secondary rounded-pill px-3 text-primary"><i class="fa fa-shopping-bag me-2 text-primary"></i> Đưa vào giỏ</a>
+				</div>
+			</div>
+		</div>
+	</div> *@
+}
